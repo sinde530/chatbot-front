@@ -59,7 +59,7 @@ export default function Chat() {
 
             setConversation([
                 ...conversation,
-                { user: userInput, bot: botResponse },
+                { user: userInput, bot: botResponse.bot_response },
             ]);
             setUserInput('');
         } catch (error) {

@@ -30,3 +30,22 @@ export async function sendMessage(userInput: string) {
         return Promise.reject(error);
     }
 }
+
+// export async function sendMessage(userInput: string, userConfirm: string) {
+//     try {
+//         const data = new FormData();
+//         data.append('user_input', userInput);
+//         data.append('user_confirm', userConfirm); // add user_confirm field
+
+//         const response = await axios.post('http://localhost:8080/chat', data, {
+//             headers: {
+//                 'Content-Type': 'multipart/form-data',
+//             },
+//         });
+
+//         return response.data;
+//     } catch (error) {
+//         console.log(error);
+//         return Promise.reject(error);
+//     }
+// }
