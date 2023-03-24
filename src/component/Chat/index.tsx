@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { sendMessage } from 'src/api/message';
 
 export const Container = styled.div({
-    maxWidth: '1728px',
     width: '100%',
     height: '100%',
     justifyContent: 'center',
@@ -16,6 +15,7 @@ export const Container = styled.div({
 });
 
 export const ChatBox = styled.div({
+    width: 'calc(100% - 115px)',
     // maxWidth: '1728px',
     // background: 'blue',
     // width: 'auto',
@@ -70,10 +70,10 @@ export default function Chat() {
     return (
         <Container>
             {conversation.map((items, index) => (
-                <div key={index}>
+                <ChatBox key={index}>
                     <p>User: {items.user}</p>
                     <p>Bot: {items.bot}</p>
-                </div>
+                </ChatBox>
             ))}
 
             <form onSubmit={handleSubmit}>
