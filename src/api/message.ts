@@ -31,6 +31,34 @@ export async function sendMessage(userInput: string) {
     }
 }
 
+export const sendMessage1 = async (
+    user_input: string,
+    confirm_message?: string,
+    new_data?: string,
+) => {
+    try {
+        const requestData = {
+            user_input,
+            confirm_message,
+            new_data,
+        };
+
+        const response = await axios.post(
+            'http://localhost:8080/chat',
+            requestData,
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            },
+        );
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        return Promise.reject(error);
+    }
+};
+
 // export async function sendMessage(userInput: string, userConfirm: string) {
 //     try {
 //         const data = new FormData();

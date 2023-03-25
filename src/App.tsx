@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import Chat from './component/Chat';
+import ConfirmChat from './component/ConfirmChat';
 
 export const Container = styled.div({
     width: '100%',
@@ -14,7 +15,8 @@ export const Container = styled.div({
 export default function App() {
     return (
         <Container>
-            <Chat />
+            {/* <Chat /> */}
+            <ConfirmChat />
         </Container>
     );
 }
