@@ -7,7 +7,7 @@ export const Container = styled.div({
     width: '100%',
     height: '100%',
     justifyContent: 'center',
-    background: 'red',
+    background: '#ffa1a1',
     alignItems: 'center',
     margin: '0 auto',
 });
@@ -15,8 +15,8 @@ export const Container = styled.div({
 export default function App() {
     return (
         <Container>
-            {/* <Chat /> */}
-            <ConfirmChat />
+            <Chat />
+            {/* <ConfirmChat /> */}
         </Container>
     );
 }
